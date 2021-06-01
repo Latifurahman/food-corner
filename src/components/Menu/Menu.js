@@ -6,7 +6,7 @@ const Menu = () => {
     return (
         <Navbar bg="light" expand="lg">
             <Container>
-                <Navbar.Brand href="/home">FOOD-CORNER</Navbar.Brand>
+                <Navbar.Brand href="/home" className="navbar-brand">FOOD-CORNER</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ml-auto">
@@ -14,7 +14,7 @@ const Menu = () => {
                         <Nav.Link href="/orders">Orders</Nav.Link>
                         <Nav.Link href="/admin">Admin</Nav.Link>
                         <Nav.Link href="/deals">Deals</Nav.Link>
-                        <Nav.Link href="/login">Login</Nav.Link>
+                        <Nav.Link href="/login" className="active">Login</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
