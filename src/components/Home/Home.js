@@ -4,8 +4,7 @@ import React from 'react';
 const Home = () => {
     return (
         <div>
-            <h1>This is home component</h1>
-            
+            <h2>This is home component</h2>
         </div>
         
     );
