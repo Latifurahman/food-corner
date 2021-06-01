@@ -1,0 +1,30 @@
+.navbar{
+    margin-bottom: 30px;
+}
+.nav-link{
+    color: #3C3C3C;
+    font-weight: 500;
+}
+.navbar-brand{
+    color: #363958;
+    font-weight: bold;
+}
+.nav-item{
+    margin: 0 20px;
+}
+.navbar-nav{
+    padding: 10px 0;
+}
+.active,
+.nav-link:hover{
+    background-color: #71BA58;
+    color: #fff;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+.navbar-toggler{
+    color: red;
+}
