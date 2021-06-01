@@ -1,0 +1,22 @@
+.product-price{
+    color: #71BA58;
+    font-size: 30px;
+    font-weight: 800;
+    padding: 5px;
+}
+.buy-now-btn{
+    margin-left: 40px;
+    background-color: #71BA58;
+    color: #fff;
+    width: 120px;
+    padding: 5px;
+    font-weight: 700;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.MuiPaper-root{
+    margin-bottom: 30px;
+}
