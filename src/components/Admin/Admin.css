@@ -1,0 +1,19 @@
+.navbar-admin{
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    /* margin-left: -300px; */
+    background-color: #203D37;
+    transition: .2s;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -ms-transition: .2s;
+    -o-transition: .2s;
+}
+.nav-link{
+    font-size: 1.25em;
+}
+.admin-title{
+    margin-left: 55px;
+    border-bottom: 1px solid #fff;
+}
