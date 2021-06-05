@@ -8,7 +8,7 @@ const Admin = () => {
     return (
         
             <nav className="navbar-admin navbar-expand fixed d-flex flex-column align-items-start" id="sidebar">
-                <a href="/addProduct" className="navbar-brand text-light mt-5 admin-title">
+                <a href="/addProducts" className="navbar-brand text-light mt-5 admin-title">
                     <div className="display-5 font-weight-bold">Food Corner</div>
 
                 </a>

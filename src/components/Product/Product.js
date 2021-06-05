@@ -26,7 +26,7 @@ const Product = ({product}) => {
             <CardActionArea>
                 <CardMedia
                     className={classes.media}
-                    image={product.image}
+                    image={product.imageURL}
                 />
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="h6">

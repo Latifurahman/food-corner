@@ -13,16 +13,17 @@ const AddProduct = () => {
             price: data.price,
             imageURL: imageURL
         }
-        const url = `https://localhost:5000/addProduct`;
-        
-        fetch(url,{
+        const url = `http://localhost:5055/addProduct`;
+        fetch(url, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
             },
             body: JSON.stringify(productData)
         })
-        .then(res => console.log('adding server side response: ', res))
+        .then(res => console.log('server side response ', res))
+        
+        
         
     };
 
