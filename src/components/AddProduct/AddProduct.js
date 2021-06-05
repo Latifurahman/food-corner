@@ -13,7 +13,17 @@ const AddProduct = () => {
             price: data.price,
             imageURL: imageURL
         }
-        console.log(data)
+        const url = `https://localhost:5000/addProduct`;
+        
+        fetch(url,{
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(productData)
+        })
+        .then(res => console.log('adding server side response: ', res))
+        
     };
 
     const handleUploadImage = event => {
