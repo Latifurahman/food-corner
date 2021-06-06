@@ -3,9 +3,11 @@ import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
 import './AddProduct.css';
 
-const AddProduct = () => {
+const AddProduct = ({setProductDetails}) => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const [imageURL, setImageURL] = useState(null);
+
+    
 
     const onSubmit = data => {
         const productData = {
@@ -13,6 +15,7 @@ const AddProduct = () => {
             price: data.price,
             imageURL: imageURL
         }
+        
         const url = `http://localhost:5055/addProduct`;
         fetch(url, {
             method: 'POST',
@@ -23,10 +26,9 @@ const AddProduct = () => {
         })
         .then(res => console.log('server side response ', res))
         
-        
-        
+        setProductDetails(productData)
     };
-
+    
     const handleUploadImage = event => {
         console.log(event.target.files[0])
         const imageData = new FormData();
@@ -42,7 +44,7 @@ const AddProduct = () => {
             });
     }
     return (
-        <form onSubmit={handleSubmit(onSubmit)} className="container mt-1 form-container">
+        <form onSubmit={handleSubmit(onSubmit)} className="container form-container">
             <h1 className="add-product-title">Add Product</h1>
             <div className="row">
                 <div className="col-md-4">

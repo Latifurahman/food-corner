@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -32,15 +32,6 @@ function App() {
           </Route>
           <Route path="/admin">
             <Admin />
-          </Route>
-          <Route path="/addProduct">
-            <AddProduct />
-          </Route>
-          <Route path="/manageProduct">
-            <ManageProduct/>
-          </Route>
-          <Route path="/editProduct">
-            <EditProduct />
           </Route>
           <Route path="/deals">
             <Deals />
