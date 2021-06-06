@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import ListIcon from '@material-ui/icons/List';
 import AddIcon from '@material-ui/icons/Add';
 import EditIcon from '@material-ui/icons/Edit';
@@ -14,7 +14,13 @@ import AddProduct from '../AddProduct/AddProduct';
 import EditProduct from '../EditProduct/EditProduct';
 
 const Admin = () => {
-    
+    const [productDetails, setProductDetails] = useState({});
+
+    useEffect(() =>{
+        fetch('http://localhost:5055/products')
+        .then(res => res.json())
+        .then(data => setProductDetails(data))
+    }, [])
 
     return (
 
@@ -37,7 +43,9 @@ const Admin = () => {
                     <div className="col-md-9">
                         <Switch>
                             <Route path="/manageProduct">
-                                <ManageProduct></ManageProduct>
+                                {
+                                    productDetails.map( product => <ManageProduct product={product}></ManageProduct> )
+                                }
                             </Route>
                         </Switch>
                     <Switch>
