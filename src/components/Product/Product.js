@@ -8,6 +8,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import './Product.css';
+import { Link } from 'react-router-dom';
 
 const Product = ({product}) => {
     console.log(product)
@@ -38,8 +39,9 @@ const Product = ({product}) => {
                 <Typography gutterBottom variant="h5" component="h2">
                     <span className="product-price">${product.price}</span>
                 </Typography>
-                <Button size="large" color="primary">
+                <Button  size="large" color="primary"><Link to={"/checkOut"}>
                     <span className="buy-now-btn">Buy Now</span>
+                </Link>
                  </Button>
             </CardActions>
         </Card>

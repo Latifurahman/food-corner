@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import Product from '../Product/Product';
 import './Home.css';
 
-
 const Home = () => {
     const [products, setProducts] = useState([]);
 
