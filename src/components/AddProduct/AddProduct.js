@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
 import './AddProduct.css';
 
-const AddProduct = ({setProductDetails}) => {
+const AddProduct = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const [imageURL, setImageURL] = useState(null);
 
@@ -26,7 +26,6 @@ const AddProduct = ({setProductDetails}) => {
         })
         .then(res => console.log('server side response ', res))
         
-        setProductDetails(productData)
     };
     
     const handleUploadImage = event => {

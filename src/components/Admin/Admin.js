@@ -13,8 +13,9 @@ import ManageProduct from '../ManageProduct/ManageProduct';
 import AddProduct from '../AddProduct/AddProduct';
 import EditProduct from '../EditProduct/EditProduct';
 
+
 const Admin = () => {
-    const [productDetails, setProductDetails] = useState({});
+    const [productDetails, setProductDetails] = useState([]);
 
     useEffect(() =>{
         fetch('http://localhost:5055/products')
@@ -24,7 +25,7 @@ const Admin = () => {
 
     return (
 
-            <Router>
+        <Router>
                 <div className="row container-fluid">
                     <div className="col-md-3 sidebar">
 
@@ -43,9 +44,11 @@ const Admin = () => {
                     <div className="col-md-9">
                         <Switch>
                             <Route path="/manageProduct">
+                                <div className="product-manage">
                                 {
-                                    productDetails.map( product => <ManageProduct product={product}></ManageProduct> )
+                                    productDetails.map(product => <ManageProduct key={product._id} product={product}></ManageProduct>)
                                 }
+                                </div>
                             </Route>
                         </Switch>
                     <Switch>
