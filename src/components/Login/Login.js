@@ -6,7 +6,7 @@ import './Login.css';
 import firebaseConfig from '../../firebase.config';
 
 
-!firebase.apps.length ? firebase.initializeApp(firebaseConfig) : firebase.app()
+!firebase.apps.length ? firebase.initializeApp(firebaseConfig) : firebase.app();
 
 
 

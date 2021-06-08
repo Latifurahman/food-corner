@@ -10,8 +10,10 @@ import Typography from '@material-ui/core/Typography';
 import './Product.css';
 import { Link } from 'react-router-dom';
 
-const Product = ({product}) => {
-    console.log(product)
+const Product = (props) => {
+    
+    const { _id, name, price, imageURL} = props.product;
+    
 
     const useStyles = makeStyles({
         root: {
@@ -27,19 +29,19 @@ const Product = ({product}) => {
             <CardActionArea>
                 <CardMedia
                     className={classes.media}
-                    image={product.imageURL}
+                    image={imageURL}
                 />
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="h6">
-                        {product.name}
+                        {name}
                     </Typography>
                 </CardContent>
             </CardActionArea>
             <CardActions>
                 <Typography gutterBottom variant="h5" component="h2">
-                    <span className="product-price">${product.price}</span>
+                    <span className="product-price">${price}</span>
                 </Typography>
-                <Button  size="large" color="primary"><Link to={"/checkOut"}>
+                <Button  size="large" color="primary"><Link to={"/product/"+_id}>
                     <span className="buy-now-btn">Buy Now</span>
                 </Link>
                  </Button>

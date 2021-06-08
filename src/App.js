@@ -37,11 +37,11 @@ function App() {
           <Route path="/login">
             <Login />
           </Route>
-          {/* <Route path="*">
-            <NoMatch />
-          </Route> */}
-          <Route path="/checkOut">
+          <Route path="/product/:productId">
             <CheckOut />
+          </Route>
+          <Route path="*">
+            <NoMatch />
           </Route>
         </Switch>
       </div>
