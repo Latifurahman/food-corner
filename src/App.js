@@ -40,9 +40,9 @@ function App() {
           <Route path="/product/:productId">
             <CheckOut />
           </Route>
-          <Route path="*">
+          {/* <Route path="*">
             <NoMatch />
-          </Route>
+          </Route> */}
         </Switch>
       </div>
     </Router>
