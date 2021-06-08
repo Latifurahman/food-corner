@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import DeleteIcon from '@material-ui/icons/Delete';
 import './ManageProduct.css';
 
@@ -6,7 +6,7 @@ import './ManageProduct.css';
 const ManageProduct = ({product}) => {
 
     const deleteProduct = id => {
-        fetch(`http://localhost:5055/deleteProduct/${id}`,{
+        fetch(`https://dry-badlands-49428.herokuapp.com/deleteProduct/${id}`,{
             method: 'DELETE',
         })
         .then(res => res.json())

@@ -18,7 +18,7 @@ const Admin = () => {
     const [productDetails, setProductDetails] = useState([]);
 
     useEffect(() =>{
-        fetch('http://localhost:5055/products')
+        fetch('https://dry-badlands-49428.herokuapp.com/products')
         .then(res => res.json())
         .then(data => setProductDetails(data))
     }, [])

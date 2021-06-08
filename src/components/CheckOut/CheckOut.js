@@ -9,7 +9,7 @@ const CheckOut = () => {
     const [productData, setProductData] = useState({});
 
     useEffect(() => {
-        fetch('http://localhost:5055/product/' + productId)
+        fetch('https://dry-badlands-49428.herokuapp.com/product/' + productId)
         .then(res => res.json())
         .then(data => setProductData(data))
     },[productId])

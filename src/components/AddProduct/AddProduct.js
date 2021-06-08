@@ -16,7 +16,7 @@ const AddProduct = () => {
             imageURL: imageURL
         }
         
-        const url = `http://localhost:5055/addProduct`;
+        const url = `https://dry-badlands-49428.herokuapp.com/addProduct`;
         fetch(url, {
             method: 'POST',
             headers: {
