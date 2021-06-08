@@ -11,9 +11,12 @@ const CheckOut = () => {
     useEffect(() => {
         fetch('http://localhost:5055/product/' + productId)
         .then(res => res.json())
-        .then(data => setProductData(data[0]))
+        .then(data => setProductData(data))
     },[productId])
     
+    const handleCheckout = () =>{
+        alert('Thank You! Your order placed successfully.')
+    }
 
     return (
         <div className="container">
@@ -43,7 +46,7 @@ const CheckOut = () => {
                     </tfoot>
                 </table>
             </div>
-            <button className="btn btn-success float-right">Checkout</button>
+            <button onClick={handleCheckout} className="btn btn-success float-right">Checkout</button>
         </div>
     );
 };

@@ -13,6 +13,12 @@ const Home = () => {
 
     return (
         <div className="product-container container">
+            {
+                products.length === 0 && 
+                    <div className="spinner-border spinner">
+                    </div>
+                
+            }
             
             {
                 products.map(product => <Product key={product._id} product={product}></Product>)

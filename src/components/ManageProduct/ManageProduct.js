@@ -11,7 +11,7 @@ const ManageProduct = ({product}) => {
         })
         .then(res => res.json())
         .then(result =>{
-            console.log('deleted successfully')
+            console.log(result);
         })
     }
     

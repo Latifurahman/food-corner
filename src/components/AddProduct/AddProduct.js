@@ -24,12 +24,11 @@ const AddProduct = () => {
             },
             body: JSON.stringify(productData)
         })
-        .then(res => console.log('server side response ', res))
+        .then(res => console.log(res))
         
     };
     
     const handleUploadImage = event => {
-        console.log(event.target.files[0])
         const imageData = new FormData();
         imageData.set('key', '81651e35087eb2b11931d1d5e6599967');
         imageData.append('image', event.target.files[0]);

@@ -35,11 +35,9 @@ const Login = () => {
                     photo: photoURL
                 }
                 setUser(signedInUser);
-                console.log(displayName, email, photoURL)
                 var credential = result.credential;
                 var token = credential.accessToken;
                 var user = result.user;
-                console.log(credential, token, user);
                 
             }).catch((error) => {
                 var errorCode = error.code;
@@ -47,7 +45,6 @@ const Login = () => {
                 var email = error.email;
                 var credential = error.credential;
                 
-                console.log(errorCode, errorMessage, email, credential)
             });
     }
 
@@ -69,7 +66,6 @@ const Login = () => {
                 var user = result.user;
                 var accessToken = credential.accessToken;
 
-                console.log(user)
 
             })
             .catch((error) => {
@@ -77,7 +73,6 @@ const Login = () => {
                 var errorMessage = error.message;
                 var email = error.email;
                 var credential = error.credential;
-                console.log(errorCode, errorMessage, email, credential)
             });
     }
 
@@ -91,6 +86,7 @@ const Login = () => {
             <br /> <br /> <br />
 
             {
+                
                 user.isSignedIn && <h4>Welcome, {user.name}</h4>
             }
         
